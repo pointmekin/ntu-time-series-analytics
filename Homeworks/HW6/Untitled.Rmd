@@ -1,0 +1,36 @@
+---
+title: "TSA_HW6_T11902203"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Install Libraries
+
+```{r setup, include=FALSE}
+install.packages("TTR")
+install.packages("tseries")
+install.packages("TSA")
+devtools::install_github("cran/fArma")
+devtools::install_github("cran/itsmr")
+install.packages("forecast")
+```
+
+
+
+```{r setup, include=FALSE}
+library(TTR)
+library(tseries)
+library(graphics)
+library(TSA)
+library(fArma)
+library(itsmr)
+library(forecast)
+```
+
+```{r setup, include=FALSE}
+theoreticalACF = armaTrueacf(model=list(order=c(1, 1), ar=0.8, ma=0.4), lag.max=99,doplot=T)
+plot(theoreticalACF)
+```

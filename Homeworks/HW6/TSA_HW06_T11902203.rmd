@@ -1,0 +1,8 @@
+```{r}
+install.packages("TTR")
+install.packages("tseries")
+install.packages("TSA")
+devtools::install_github("cran/fArma")
+devtools::install_github("cran/itsmr")
+install.packages("forecast")
+```
